@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class OrderItem {
+public class OrderItem extends BaseEntity {
 
 	@Id @GeneratedValue
 	@Column(name="ORDER_ITEM_ID")
