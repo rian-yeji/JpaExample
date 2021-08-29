@@ -5,6 +5,9 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import jpabook.jpashop.domain.Order;
+import jpabook.jpashop.domain.OrderItem;
+
 public class App 
 {
     public static void main( String[] args )
@@ -23,6 +26,9 @@ public class App
         tx.begin();
         
         try {
+        	
+        	Order order = new Order();
+        	order.addOrderItem(new OrderItem());
 
             tx.commit();
         }catch(Exception e) {
